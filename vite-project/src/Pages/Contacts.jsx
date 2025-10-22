@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Contacts = () => {
   return (
-    <section className="py-20 flex flex-col items-center justify-center  min-h-[calc(100vh-72px)]   bg-gray-100">
+    <section className="py-20 flex flex-col items-center justify-center  min-h-[calc(100vh-72px)]   bg-gray-400">
       <div className="text-center space-y-6">
         <h2 className="text-4xl font-bold mb-8 text-gray-800">Contattami</h2>
 
