@@ -1,14 +1,14 @@
 
 import html5 from "../assets/html5.png";
-import Javascriptlogo from "../assets/Javascriptlogo.png";
-import ReactLogo from "../assets/React.png";
-import ReduxLogo from "../assets/Redux.png";
-import TailwindLogo from "../assets/Tailwindcss.png";
+import Javascriptlogo from "../assets/javascriptlogo.png";
+import ReactLogo from "../assets/react.png";
+import ReduxLogo from "../assets/redux.png";
+import TailwindLogo from "../assets/tailwindcss.png";
 import GitLogo from "../assets/git.png";
 import GitHubLogo from "../assets/github.png";
 
-import Typescript from "../assets/Typescript.png";
-import NodeJs from "../assets/NodeJs.png";
+import Typescript from "../assets/typescript.png";
+import NodeJs from "../assets/nodeJs.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
