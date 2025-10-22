@@ -1,5 +1,5 @@
 
-import HTML5 from "../assets/html5.png";
+import html5 from "../assets/html5.png";
 import Javascriptlogo from "../assets/Javascriptlogo.png";
 import ReactLogo from "../assets/React.png";
 import ReduxLogo from "../assets/Redux.png";
@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 
 const CompetenceCarousel = () => {
   const cardData = [
-    { title: "HTML5", image: HTML5 },
+    { title: "HTML5", image: html5 },
     { title: "Javascript", image: Javascriptlogo },
     { title: "React", image: ReactLogo },
     { title: "Redux", image: ReduxLogo },
