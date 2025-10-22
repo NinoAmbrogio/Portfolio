@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import preview from "../assets/portfolioImg.png";
 
-const ProjectCard = () => {
+const ProjectCard = ({ previewImage }) => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
@@ -46,7 +45,7 @@ const ProjectCard = () => {
   }
 
   return (
-    <div className="flex flex-wrap  gap-10">
+    <div className="flex flex-wrap gap-10">
       {repos
         .filter(r => !r.fork)
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
@@ -62,7 +61,7 @@ const ProjectCard = () => {
               className="flex flex-col h-full w-full"
             >
               <img
-                src={preview}
+                src={previewImage}
                 alt={repo.name}
                 className="w-full h-48 object-cover"
               />
