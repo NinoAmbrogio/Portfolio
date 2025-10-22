@@ -8,7 +8,7 @@ import gitlogo from "../assets/git.png";
 import githublogo from "../assets/github.png";
 
 import typescript from "../assets/typescript.png";
-import nodejs from "../assets/nodeJs.png";
+import nodejs from "../assets/nodejs.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
