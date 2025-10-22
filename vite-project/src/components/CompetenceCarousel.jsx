@@ -7,13 +7,11 @@ import TailwindLogo from "../assets/Tailwindcss.png";
 import GitLogo from "../assets/git.png";
 import GitHubLogo from "../assets/github.png";
 import BackEnd from "../assets/BackEnd.png";
-import Typescript from "../assets/Typescript.png"
-import NodeJs from  "../assets/NodeJs.png"
-
+import Typescript from "../assets/Typescript.png";
+import NodeJs from "../assets/NodeJs.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
-
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,16 +26,31 @@ const CompetenceCarousel = () => {
     { title: "TailwindCss", image: TailwindLogo },
     { title: "Git", image: GitLogo },
     { title: "GitHub", image: GitHubLogo },
-    { title: "Backend", image: BackEnd },
-    {title : "Typescript", image: Typescript},
-    {title : "NodeJs", image: NodeJs }
+    { title: "Typescript", image: Typescript },
+    { title: "NodeJs", image: NodeJs },
   ];
 
   return (
-    <div className="relative max-w-6xl mx-auto">
+    <div className="relative max-w-4xl mx-auto"> 
       
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-12 sm:w-16 z-10 bg-gradient-to-r from-transparent via-transparent to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-12 sm:w-16 z-10 bg-gradient-to-l from-transparent via-transparent to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-8 sm:w-10 z-10 bg-gradient-to-r from-transparent via-transparent to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-8 sm:w-10 z-10 bg-gradient-to-l from-transparent via-transparent to-transparent" />
+
+     
+      <style>{`
+        .swiper-button-next, .swiper-button-prev {
+          width: 26px; height: 26px; 
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+          font-size: 14px; 
+        }
+        .swiper-pagination-bullet {
+          width: 6px; height: 6px; opacity: .5;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      `}</style>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay, A11y]}
@@ -50,25 +63,30 @@ const CompetenceCarousel = () => {
           pauseOnMouseEnter: true,
           disableOnInteraction: false,
         }}
-        spaceBetween={16}
+        spaceBetween={12}                       
         slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 2, spaceBetween: 16 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 24 },
+          640: { slidesPerView: 2, spaceBetween: 12 },
+          768: { slidesPerView: 3, spaceBetween: 14 },
+          1024: { slidesPerView: 4, spaceBetween: 16 },
         }}
         className="w-full"
       >
         {cardData.map((card, index) => (
           <SwiperSlide key={index} className="!h-auto">
-            <div className="flex items-center justify-center w-full h-[15rem] md:h-[18rem] lg:h-[20rem] rounded-xl relative group hover:scale-95 transition-all duration-300">
+            <div className="flex items-center justify-center w-full 
+                            h-40 md:h-44 lg:h-48                   /* prima 15/18/20rem */
+                            rounded-lg relative group 
+                            hover:scale-[0.98] transition-all duration-300">
               <img
                 src={card.image}
                 alt={card.title}
-                className="max-h-full max-w-full object-contain p-4"
+                className="max-h-full max-w-full object-contain p-2 md:p-3" /* padding ridotto */
               />
-              <div className="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 left-0 w-full h-full bg-black/30 rounded-xl backdrop-blur-sm">
-                <p className="text-white text-lg font-semibold text-center">
+              <div className="flex items-center justify-center px-3 opacity-0 group-hover:opacity-100 
+                              transition-all duration-300 absolute bottom-0 left-0 w-full h-full 
+                              bg-black/30 rounded-lg backdrop-blur-[2px]">
+                <p className="text-white text-sm md:text-base font-semibold text-center">
                   {card.title}
                 </p>
               </div>
