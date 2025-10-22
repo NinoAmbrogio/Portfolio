@@ -1,14 +1,14 @@
 
 import html5 from "../assets/html5.png";
 import javascriptlogo from "../assets/javascriptlogo.png";
-import reactLogo from "../assets/react.png";
-import reduxLogo from "../assets/redux.png";
-import tailwindLogo from "../assets/tailwindcss.png";
-import gitLogo from "../assets/git.png";
-import gitHubLogo from "../assets/github.png";
+import reactlogo from "../assets/react.png";
+import reduxlogo from "../assets/redux.png";
+import tailwindlogo from "../assets/tailwindcss.png";
+import gitlogo from "../assets/git.png";
+import githublogo from "../assets/github.png";
 
-import Typescript from "../assets/typescript.png";
-import NodeJs from "../assets/nodeJs.png";
+import typescript from "../assets/typescript.png";
+import nodejs from "../assets/nodeJs.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
@@ -21,13 +21,13 @@ const CompetenceCarousel = () => {
   const cardData = [
     { title: "HTML5", image: html5 },
     { title: "Javascript", image: javascriptlogo },
-    { title: "React", image: reactLogo },
-    { title: "Redux", image: reduxLogo },
-    { title: "TailwindCss", image: tailwindLogo },
-    { title: "Git", image: gitLogo },
-    { title: "GitHub", image: gitHubLogo },
-    { title: "Typescript", image: Typescript },
-    { title: "NodeJs", image: NodeJs },
+    { title: "React", image: reactlogo },
+    { title: "Redux", image: reduxlogo },
+    { title: "TailwindCss", image: tailwindlogo },
+    { title: "Git", image: gitlogo },
+    { title: "GitHub", image: githublogo },
+    { title: "Typescript", image: typescript },
+    { title: "NodeJs", image: nodejs },
   ];
 
   return (
