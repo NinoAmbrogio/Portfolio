@@ -1,12 +1,12 @@
-import React from "react";
-import HTML5 from "../assets/HTML5.png";
+
+import HTML5 from "../assets/html5.png";
 import Javascriptlogo from "../assets/Javascriptlogo.png";
 import ReactLogo from "../assets/React.png";
 import ReduxLogo from "../assets/Redux.png";
 import TailwindLogo from "../assets/Tailwindcss.png";
 import GitLogo from "../assets/git.png";
 import GitHubLogo from "../assets/github.png";
-import BackEnd from "../assets/BackEnd.png";
+
 import Typescript from "../assets/Typescript.png";
 import NodeJs from "../assets/NodeJs.png";
 
