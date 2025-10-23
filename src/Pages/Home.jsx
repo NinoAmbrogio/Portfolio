@@ -21,7 +21,6 @@ const Home = () => {
         flex flex-col justify-center items-center 
         px-4 sm:px-6 lg:px-8 
         py-8 sm:py-12 
-        overflow-x-hidden 
       "
     >
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center mb-12 sm:mb-16 lg:mb-20">
