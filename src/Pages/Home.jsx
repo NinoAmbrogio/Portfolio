@@ -13,21 +13,29 @@ const Stat = ({ value, label }) => (
 const Home = () => {
   return (
     <section
-  className="
-    relative
-    min-h-screen             
-    md:min-h-[100svh]      
-    bg-gradient-to-b from-[#0b0f13] to-[#1f242b]
-    text-white
-    flex flex-col justify-center items-center
-    px-4 sm:px-6 lg:px-8
-    py-8 sm:py-12
-    overflow-x-hidden
-  "
->
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center mb-12 sm:mb-16 lg:mb-20">
+      className="
+        relative 
+        min-h-screen md:min-h-[100svh] 
+        bg-gradient-to-b from-[#0b0f13] to-[#1f242b] 
+        text-white 
+        flex flex-col justify-center items-center 
+        px-4 sm:px-6 lg:px-8 
+        py-8 sm:py-12 
+        overflow-x-hidden
+      "
+    >
+      {/* Contenuto principale */}
+      <div
+        className="
+          max-w-6xl w-full 
+          flex flex-col lg:flex-row 
+          items-center justify-between 
+          gap-6 sm:gap-8 lg:gap-10 
+          mb-12 sm:mb-16 lg:mb-20
+        "
+      >
         {/* Testo */}
-        <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
+        <div className="flex-1 space-y-4 sm:space-y-5 text-center lg:text-left order-2 lg:order-1">
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
             <span className="px-2.5 py-1 rounded-md bg-indigo-600 text-white text-xs">
               Disponibile per collaborazioni
@@ -66,7 +74,7 @@ const Home = () => {
         </div>
 
         {/* Immagine */}
-        <div className="lg:col-span-5 flex justify-center order-first lg:order-last">
+        <div className="flex-1 flex justify-center order-1 lg:order-2">
           <img
             src={fotonino}
             alt="Antonino"
@@ -80,7 +88,7 @@ const Home = () => {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8 lg:mb-10 text-center">
           💻 Competenze Tecniche
         </h2>
-        <div className="bg-[#262c33] rounded-2xl shadow-lg border border-white/10 w-full max-w-5xl overflow-hidden">
+        <div className="bg-[#262c33] rounded-2xl shadow-lg border border-white/10 w-full max-w-5xl overflow-hidden min-h-[200px]">
           <CompetenceCarousel />
         </div>
       </div>
