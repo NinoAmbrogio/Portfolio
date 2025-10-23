@@ -13,16 +13,18 @@ const Stat = ({ value, label }) => (
 const Home = () => {
   return (
     <section
-      className="
-        relative 
-        min-h-screen 
-        bg-gradient-to-b from-[#0b0f13] to-[#1f242b] 
-        text-white 
-        flex flex-col justify-center items-center 
-        px-4 sm:px-6 lg:px-8 
-        py-8 sm:py-12 
-      "
-    >
+  className="
+    relative
+    min-h-screen             
+    md:min-h-[100svh]      
+    bg-gradient-to-b from-[#0b0f13] to-[#1f242b]
+    text-white
+    flex flex-col justify-center items-center
+    px-4 sm:px-6 lg:px-8
+    py-8 sm:py-12
+    overflow-x-hidden
+  "
+>
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center mb-12 sm:mb-16 lg:mb-20">
         {/* Testo */}
         <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
