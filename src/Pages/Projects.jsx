@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import preview from "../assets/portfolioImg.png";
+
 
 const Projects = () => {
   return (
@@ -11,7 +11,7 @@ const Projects = () => {
         </h2>
 
         <div className="w-full">
-          <ProjectCard previewImage={preview} />
+          <ProjectCard />
         </div>
       </div>
     </section>

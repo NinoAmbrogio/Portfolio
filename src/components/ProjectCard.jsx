@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ProjectCard = ({ previewImage }) => {
+const ProjectCard = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
@@ -13,14 +13,20 @@ const ProjectCard = ({ previewImage }) => {
         setLoading(true);
         setErr(null);
 
-        const res = await fetch(
-          "https://api.github.com/users/NinoAmbrogio/repos",
-          { signal: controller.signal }
-        );
+        const res = await fetch("https://api.github.com/users/NinoAmbrogio/repos", {
+          signal: controller.signal,
+        });
         if (!res.ok) throw new Error(`GitHub API ${res.status}`);
 
         const data = await res.json();
-        setRepos(data);
+
+       
+        const reposWithPreview = data.map(repo => ({
+          ...repo,
+          previewUrl: `https://raw.githubusercontent.com/NinoAmbrogio/${repo.name}/main/src/assets/preview.png`,
+        }));
+
+        setRepos(reposWithPreview);
       } catch (e) {
         if (e.name !== "AbortError") setErr(e.message || "Errore sconosciuto");
       } finally {
@@ -32,17 +38,8 @@ const ProjectCard = ({ previewImage }) => {
     return () => controller.abort();
   }, []);
 
-  if (loading) {
-    return <p className="text-center text-gray-400">Caricamento…</p>;
-  }
-
-  if (err) {
-    return (
-      <p className="text-center text-red-400">
-        Errore nel fetch: {err}
-      </p>
-    );
-  }
+  if (loading) return <p className="text-center text-gray-400">Caricamento…</p>;
+  if (err) return <p className="text-center text-red-400">Errore nel fetch: {err}</p>;
 
   return (
     <div className="flex flex-wrap gap-10">
@@ -61,9 +58,13 @@ const ProjectCard = ({ previewImage }) => {
               className="flex flex-col h-full w-full"
             >
               <img
-                src={previewImage}
+                src={repo.previewUrl}
                 alt={repo.name}
                 className="w-full h-48 object-cover"
+                onError={(e) => {
+                  // se non trova preview.png → usa un’immagine di default
+                 
+                }}
               />
               <div className="p-4 flex flex-col flex-grow justify-between">
                 <h3 className="text-xl font-semibold mb-2 text-gray-300">
