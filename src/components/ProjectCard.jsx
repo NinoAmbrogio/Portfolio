@@ -62,7 +62,7 @@ const ProjectCard = () => {
                 alt={repo.name}
                 className="w-full h-48 object-cover"
                 onError={(e) => {
-                  // se non trova preview.png → usa un’immagine di default
+                 
                  
                 }}
               />
