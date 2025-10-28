@@ -16,7 +16,7 @@ const Home = () => {
       className="
         relative 
         min-h-screen md:min-h-[100svh] 
-        bg-gradient-to-b from-[#0b0f13] to-[#1f242b] 
+       
         text-white 
         flex flex-col justify-center items-center 
         px-4 sm:px-6 lg:px-8 
