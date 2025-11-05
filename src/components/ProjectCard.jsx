@@ -60,7 +60,7 @@ const ProjectCard = () => {
               <img
                 src={repo.previewUrl}
                 alt={repo.name}
-                className="w-full h-48 object-cover"
+                className="w-full object-cover"
                 onError={(e) => {
                  
                  
