@@ -78,7 +78,7 @@ const CompetenceCarousel = () => {
               <img
                 src={card.image}
                 alt={card.title}
-                className="max-h-full max-w-full object-contain p-2 md:p-3" /* padding ridotto */
+                className="max-h-full max-w-full object-contain p-2 md:p-3" 
               />
               <div className="flex items-center justify-center px-3 opacity-0 group-hover:opacity-100 
                               transition-all duration-300 absolute bottom-0 left-0 w-full h-full 
